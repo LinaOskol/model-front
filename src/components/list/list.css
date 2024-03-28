@@ -1,0 +1,6 @@
+li {
+  cursor: pointer;
+}
+.highlight {
+  background-color: rgb(152, 149, 149); /* Or any other color */
+}
