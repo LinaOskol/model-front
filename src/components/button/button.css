@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+  position: fixed; /* Фиксированное позиционирование */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2; /* Убедитесь, что модальное окно находится над другими элементами */
+}
+
+.content-features-targets {
+  background-color: white; /* Фон для модального контента */
+  padding: 20px; /* Отступы вокруг контента */
+  margin: 10% auto; /* Центрирование модального окна */
+  width: 50%; /* Ширина модального окна */
+}
