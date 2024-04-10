@@ -14,10 +14,9 @@ function List() {
   }, []);
 
   const handleClick = (fileName, index) => {
-    //alert("привет");
     localStorage.setItem("selectedFile", fileName);
     console.log(localStorage.getItem("selectedFile"));
-    setSelected(index); // Set the selected index
+    setSelected(index); 
   };
 
   return (
