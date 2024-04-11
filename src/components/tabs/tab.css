@@ -2,28 +2,32 @@
   margin: 100px;
 }
 .tabs-container {
-  min-width: 1000px;
+  max-width: 1000px;
   margin: 20px auto;
 }
 .tabs {
   display: flex;
+  margin-bottom: 20px;
+  font-size: 14pt;
+  font-family: "OpenSans-Regular";
+  width: 100%;
 }
 
 .tab {
   cursor: pointer;
   padding: 10px;
   margin-right: 10px;
-  border: 1px solid #ddd;
-  border-bottom: none;
-  background-color: #ded3d3;
+
+  background-color: #ffffff;
 }
 
 .tab.active {
-  background-color: #989494;
+  background-color: #cfcfcf;
+  border-bottom: 1px solid #000000;
 }
 
 .tab-content {
-  border: 1px solid #000000;
+  border: 1px solid #f5f5f5;
   padding: 20px;
 }
 .buttons {

@@ -48,7 +48,7 @@ const ButtonTraining = ({ isActive }) => {
   return (
     <div>
       <Popup
-        trigger={<button disabled={!isActive}>Обучение</button>}
+        trigger={<button disabled={!isActive}>Обучить</button>}
         modal
         nested
         closeOnDocumentClick={false} // Отключите закрытие по умолчанию
@@ -64,14 +64,20 @@ const ButtonTraining = ({ isActive }) => {
             }}
           >
             <div className="content-features-targets">
-              <div onClick={() => close()}>X</div>
-              <div className="target">
-                <input key={target} type="checkbox" id="target-checkbox" name="target"
-                  checked={isTargetChecked}
-                  onChange={handleTargetChange}></input>
-                <label htmlFor="target-checkbox">{target}</label>
+              <div className="close" onClick={() => close()}>X</div>
+              <div className="checkbox">
+                <div className="target">
+                   <h5>Выберите таргет</h5>
+                   <div>
+                   <input key={target} type="checkbox" id="target-checkbox" name="target"
+                     checked={isTargetChecked}
+                      onChange={handleTargetChange}>
+                   </input>
+                   <label htmlFor="target-checkbox">{target}</label></div>
               </div>
               <div className="features">
+              <h5>Выберите фичи</h5>
+              <div className="features-li">
                 {
                   features.map((feature, index)=>(
                     <li key={index}>
@@ -81,9 +87,10 @@ const ButtonTraining = ({ isActive }) => {
                   
                     </li>
                   ))
-                }
+                }</div>
               </div>
-              <button onClick={() => {handleSubmit(); close();}}>Отправить</button>
+              </div>
+              <p><button className="send_button" onClick={() => {handleSubmit(); close();}}>Отправить</button></p>
             </div>
           </div>
         )}

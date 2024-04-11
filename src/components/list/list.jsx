@@ -20,8 +20,8 @@ function List() {
   };
 
   return (
-    <div>
-      <ul>
+    <div className="list">
+      <ul >
         {files.map((file, index) => (
           <li
             key={index}

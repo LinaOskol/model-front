@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ButtonTraining from "./buttontraining";
+import "./button.css";
 const Dbutton = () => {
   const [isPostSuccessful, setIsPostSuccessful] = useState(false);
   // Функция для отправки данных
@@ -33,8 +34,8 @@ const Dbutton = () => {
   };
 
   return (
-    <div>
-      <button onClick={sendData}>Загрузить</button>
+    <div className="buttonstwo" >
+      <button className="download" onClick={sendData}>Загрузить</button>
       <ButtonTraining isActive={isPostSuccessful} />
     </div>
   );

@@ -51,7 +51,7 @@ const ButtonPrognoz = ()=>{
   return (
     <div>
       <Popup
-        trigger={<button>Прогноз</button>}
+        trigger={<button className="prognoz">Прогноз</button>}
         modal
         nested
         closeOnDocumentClick={false} 
@@ -66,27 +66,33 @@ const ButtonPrognoz = ()=>{
             }}
           >
             <div className="content-features-targets">
-              <div onClick={() => close()}>X</div>
-              
+              <div className="close" onClick={() => close()}>X</div>
+              <div className="checkbox">
               <div className="target">
+                <h5>Выберите таргет</h5>
+              <div>
                 <input key={target} type="checkbox" id="target-checkbox" name="target"
                   checked={isTargetChecked}
                   onChange={handleTargetChange}></input>
-                <label htmlFor="target-checkbox">{target}</label>
+                <label htmlFor="target-checkbox">{target}</label></div>
               </div>
               <div className="features">
+                <h5>Выберите фичи</h5>
+                <div className="features-li">
                 {
                   features.map((feature, index)=>(
-                    <li key={index}>
+                    <li className="checkbox-li" key={index}>
+                     
                       <input type="checkbox" id={`feature-${index}`}     checked={selectedFeatures[index]}
                       onChange={() => handleFeatureChange(index)}/>
-                      <label htmlFor={`feature-${index}`}>{feature}</label>
+                       <label htmlFor={`feature-${index}`}>{feature}</label>
                   
                     </li>
                   ))
-                }
+                }</div>
+                </div>
               </div>
-              <button onClick={() => {handleSubmit(); close(); sendData();}}>Отправить</button>
+             <p><button  className="send_button" onClick={() => {handleSubmit(); close(); }}>Отправить</button></p> 
             </div>
           </div>
         )}

@@ -7,6 +7,7 @@ const Two = () => {
     <div className="content-tab-two">
       <ButtonPrognoz></ButtonPrognoz>
       <div className="List">
+      <h5>Выберите файл</h5>
         <List></List>
       </div>
     </div>

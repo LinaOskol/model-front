@@ -1,6 +1,21 @@
-li {
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("fonts/OpenSans-Regular.ttf");
+}
+.list li {
   cursor: pointer;
+  padding: 10px;
+  color: #000;
+  font-size: 14pt;
+  font-family: "OpenSans-Regular";
+  border: 1px solid #bcbcbc;
+  margin: 5px;
 }
 .highlight {
-  background-color: rgb(152, 149, 149); /* Or any other color */
+  background-color: rgb(216, 215, 215); /* Or any other color */
+}
+.list {
+}
+ul {
+  list-style: none;
 }
